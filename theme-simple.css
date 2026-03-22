@@ -1,0 +1,240 @@
+/* @theme simple-jp */
+
+@import 'default';
+
+section {
+  font-family: 'MS PGothic', 'ＭＳ Ｐゴシック', 'Yu Gothic', 'Meiryo', sans-serif;
+  background-color: #FFFFFF;
+  color: #333333;
+  padding: 40px 50px;
+  justify-content: flex-start;
+  align-items: stretch;
+  text-align: left;
+}
+
+/* Title slide */
+section.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #1a1a2e;
+  color: #FFFFFF;
+}
+
+section.title h1 {
+  font-size: 2.2em;
+  border-bottom: none;
+  color: #FFFFFF;
+}
+
+section.title h2 {
+  font-size: 1.1em;
+  font-weight: normal;
+  color: #cccccc;
+}
+
+/* Section divider slide */
+section.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #2d3436;
+  color: #FFFFFF;
+}
+
+section.section h1 {
+  font-size: 2.4em;
+  border-bottom: none;
+  color: #FFFFFF;
+}
+
+/* Fixed title bar at top (PPT-like) */
+section:not(.title):not(.section) {
+  padding-top: 88px;
+  place-content: flex-start !important;
+}
+
+section:not(.title):not(.section) h1:first-of-type {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 16px 50px;
+  font-size: 1.6em;
+  color: #1a1a2e;
+  background-color: #FFFFFF;
+  border-bottom: 3px solid #4a90d9;
+}
+
+/* Lead text: in-flow, centered, follows title bar naturally */
+section:not(.title):not(.section) > p:first-of-type {
+  margin: 0 0 16px 0;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 1.05em;
+  font-weight: bold;
+  color: #1a1a2e;
+  border-bottom: 1px solid #cccccc;
+  width: 100%;
+}
+
+/* No-lead class: hide lead text line for slides without lead text */
+section.no-lead > p:first-of-type {
+  padding: 0 !important;
+  border-bottom: none !important;
+  font-size: 0 !important;
+  margin: 0 !important;
+  line-height: 0 !important;
+}
+
+/* Headings (h1 fallback, h2+) */
+h1 {
+  font-size: 1.6em;
+  color: #1a1a2e;
+  border-bottom: 2px solid #4a90d9;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.3em;
+  color: #2d3436;
+  margin-bottom: 16px;
+}
+
+h3 {
+  font-size: 1.1em;
+  color: #333333;
+}
+
+/* Body text */
+p, li {
+  font-size: 0.85em;
+  line-height: 1.6;
+}
+
+ul, ol {
+  margin-left: 0.5em;
+}
+
+/* Tables */
+table {
+  font-size: 0.8em;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  background-color: #4a90d9;
+  color: #FFFFFF;
+  padding: 8px 12px;
+}
+
+td {
+  padding: 6px 12px;
+  border-bottom: 1px solid #dddddd;
+}
+
+/* Code blocks */
+pre {
+  font-size: 0.75em;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  padding: 12px;
+}
+
+code {
+  font-family: 'Consolas', 'MS Gothic', monospace;
+  font-size: 0.9em;
+}
+
+/* Images */
+img {
+  max-height: 70%;
+  object-fit: contain;
+}
+
+/* Two-column layout using Marp scoped style workaround */
+/* Use with <style scoped> in each slide */
+.columns {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.columns3 {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+/* Big number emphasis */
+.big-number {
+  font-size: 3em;
+  font-weight: bold;
+  color: #4a90d9;
+  line-height: 1.2;
+}
+
+.big-number-gold {
+  font-size: 3em;
+  font-weight: bold;
+  color: #d4a017;
+  line-height: 1.2;
+}
+
+.center-stats {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Blockquote as callout */
+blockquote {
+  background-color: #e8f4fd;
+  border-left: 4px solid #4a90d9;
+  padding: 12px 16px;
+  margin: 12px 0;
+  font-size: 0.85em;
+}
+
+/* Footer text (centered at bottom) */
+section header,
+section footer {
+  font-size: 0.6em;
+  color: #333333;
+  text-align: center;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+}
+
+/* Page number */
+section::after {
+  font-size: 0.85em;
+  color: #333333;
+}
+
+/* Dark background slides: light footer/page number */
+section.title::after,
+section.section::after {
+  color: #cccccc;
+}
+
+section.title footer,
+section.section footer {
+  color: #cccccc;
+}
+
+/* Summary / conclusion slide */
+section.summary {
+  background-color: #FFFFFF;
+  color: #333333;
+}

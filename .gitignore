@@ -1,0 +1,24 @@
+# QA artifacts
+qa_img/
+
+# Build outputs (except examples/)
+*.html
+*.pdf
+*.pptx
+!examples/*.pdf
+
+# Test files
+test_*.md
+test_*.jpg
+debug.*
+
+# Original source
+*.pptx
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor (keep .vscode/settings.json for Marp theme config)
+.vscode/*
+!.vscode/settings.json

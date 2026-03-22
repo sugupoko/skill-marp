@@ -4,6 +4,8 @@
 
 [Marp](https://marp.app/) を使ってMarkdownからプレゼンテーションスライドを作成する [Claude Code](https://claude.com/claude-code) スキルです。
 
+**[サンプルスライド (PDF)](https://github.com/sugupoko/skill-marp/blob/main/examples/hubmap_summary.pdf)**
+
 ## 特徴
 
 - **タイトル + リード文 + コンテンツ** の3段構成でPPTライクなスライドを生成
@@ -17,14 +19,14 @@
 ### 方法1: Claude Code の `/install-skill` を使う
 
 ```
-/install-skill https://github.com/<your-username>/marp-skill
+/install-skill https://github.com/sugupoko/skill-marp
 ```
 
 ### 方法2: 手動インストール
 
 ```bash
 # スキルディレクトリにクローン
-git clone https://github.com/<your-username>/marp-skill.git ~/.claude/skills/marp
+git clone https://github.com/sugupoko/skill-marp.git ~/.claude/skills/marp
 
 # 依存関係をインストール
 bash ~/.claude/skills/marp/setup.sh
